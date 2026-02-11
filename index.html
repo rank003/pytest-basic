@@ -15,13 +15,31 @@
 </head>
 <body>
   <h1>Typicode Fetch Demo</h1>
-  <button id="loadBtn">Load Post</button>
-  <div id="status">Idle</div>
 
-  <div class="card">
-    <h2 id="title">Title will appear here</h2>
-    <p id="body">Body will appear here</p>
-  </div>
+  <section class="card" aria-labelledby="component-title">
+    <h2 id="component-title">Component: Counter</h2>
+    <div id="counterValue" aria-live="polite">0</div>
+    <div>
+      <button id="counterIncBtn">Increment</button>
+      <button id="counterDecBtn">Decrement</button>
+      <button id="counterResetBtn">Reset</button>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="e2e-title">
+    <h2 id="e2e-title">E2E: Fetch Post</h2>
+    <label for="postIdInput">Post ID</label>
+    <input id="postIdInput" type="number" min="1" max="100" value="1" />
+    <button id="loadPostBtn">Load Post</button>
+    <button id="loadPost1Btn">Load Post 1</button>
+    <button id="loadPost2Btn">Load Post 2</button>
+    <div id="postStatus">Idle</div>
+
+    <div>
+      <h3 id="postTitle">Title will appear here</h3>
+      <p id="postBody">Body will appear here</p>
+    </div>
+  </section>
 
   <script src="./app.js"></script>
 </body>

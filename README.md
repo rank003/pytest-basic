@@ -1,10 +1,11 @@
 # Typicode E2E (pytest + Playwright)
 
-A tiny static webpage that fetches a post from JsonPlaceholder (typicode.com) and an E2E test that verifies the UI updates.
+A tiny static webpage that includes a simple component (counter) and fetches posts from JsonPlaceholder (typicode.com), with both component and E2E tests.
 
 ## Files
 - `index.html` + `app.js` : the webpage
-- `tests/test_e2e_typicode.py` : E2E test (pytest + Playwright)
+- `tests/test_component_ui.py` : component UI tests (pytest + Playwright)
+- `tests/test_e2e_typicode.py` : E2E tests (pytest + Playwright)
 - `requirements.txt` : python deps
 - `pytest.ini` : pytest config
 
@@ -32,4 +33,4 @@ pytest -v
 
 Notes:
 - The test starts a local static server using `python -m http.server`
-- The test makes a real request to `https://jsonplaceholder.typicode.com/posts/1`
+- The E2E tests make real requests to `https://jsonplaceholder.typicode.com/posts/1` and `/posts/2`
